@@ -1,0 +1,347 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1rem 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius);
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: var(--muted);
+}
+
+.backIcon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.headerInfo {
+  min-width: 0;
+  flex: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metaIcon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .headerActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.buttonIcon {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.descriptionCard {
+  margin-bottom: 2rem;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cardContent {
+    padding: 1.5rem;
+  }
+}
+
+.description {
+  color: var(--muted-foreground);
+}
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .locationsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+.locationCard {
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.locationCard:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.locationImageContainer {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.locationImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.locationImage:hover {
+  transform: scale(1.05);
+}
+
+.photoBadge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.badgeIcon {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.locationContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .locationContent {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}
+
+.locationHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.locationName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.locationCountry {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.locationDate {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.dateIcon {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.notesSection {
+  margin-top: 0.5rem;
+}
+
+.notesTitle {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.notes {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.photosSection {
+  margin-top: 0.5rem;
+}
+
+.photosTitle {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.photosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.photoThumbnail {
+  width: 100%;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .photoThumbnail {
+    height: 4rem;
+  }
+}
+
+.photoThumbnail:hover {
+  opacity: 0.8;
+}
+
+.morePhotos {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--muted);
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .morePhotos {
+    height: 4rem;
+  }
+}
+
+.morePhotos:hover {
+  background-color: var(--accent);
+}
+
+.coordinates {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.locationActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.viewButton {
+  flex: 1;
+}
+
+.editButton {
+  font-size: 0.875rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.emptyIcon {
+  height: 3rem;
+  width: 3rem;
+  color: var(--muted-foreground);
+  margin: 0 auto 1rem;
+}
+
+.emptyTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.emptyDescription {
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
