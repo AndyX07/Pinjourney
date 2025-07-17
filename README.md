@@ -2,8 +2,6 @@
 
 Pinjourney is a full-stack travel tracker and journal web app where users can **pin locations to a map**, **write trip logs** and **upload photos**. It uses **AI-powered semantic search** to recommend cities based on user interests.
 
----
-
 ## Features
 
 - Interactive map for pinning visited or desired locations (Leaflet.js)
@@ -12,8 +10,6 @@ Pinjourney is a full-stack travel tracker and journal web app where users can **
 - Stats tracking: number of trips, countries visited, categories explored
 - JWT-based authentication
 - Image storage and vector search using Supabase
-
----
 
 ## Tech Stack
 
@@ -75,8 +71,6 @@ $$ LANGUAGE plpgsql;
 
 Run the notebook cells to embed city data and upload to Supabase: https://colab.research.google.com/drive/1qxr3GrVo3G42sL-RRxb_G-HSDZCUKf6d?usp=sharing
 
-A copy of this notebook can be found in /notebooks/travelrecommendation.ipynb
-
 4. Environment variables (in server/.env):
 
 ```
@@ -117,7 +111,6 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
----
 
 ### 2. Frontend (React + TypeScript)
 
