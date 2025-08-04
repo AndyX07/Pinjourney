@@ -21,7 +21,7 @@ Pinjourney is a full-stack travel tracker and journal web app where users can **
 ### Backend
 - **Django + Django REST Framework**
 - **Docker** (containerized backend)
-- **Supabase** (PostgreSQL, Storage, Auth, Vector Search)
+- **Supabase** (PostgreSQL, Storage Buckets, Vector Search)
 - **pgvector** extension for cosine similarity
 - **Sentence Transformers (MiniLM-L6-v2)**
 
