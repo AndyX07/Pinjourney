@@ -89,7 +89,7 @@ SUPABASE_BUCKET_NAME=your-supabase-bucket-name
 
 Option 1 (Docker)
 
-5. Run docker setup
+5. Run docker setup (builds and starts both frontend and backend containers)
 
 ```
 docker-compose up --build -d
