@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+  frontend:
+    build: ./client
+    container_name: pinjourney_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped
   backend:
     build: ./server
     container_name: pinjourney_backend
